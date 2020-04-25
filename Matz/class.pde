@@ -34,7 +34,7 @@ class Particle {
 
 
   void initMove() {
-    if(random(100) > 50) dirMod = -dirMod;
+    //if(random(100) > 50) dirMod = -dirMod;
     dir += dirMod;
 
     vD = new PVector(speed, 0);
@@ -59,6 +59,9 @@ class Particle {
     color col2 = color(3, 16+age/2, 255, 80);
     color col3 = color(235+age/2, 230, 232, 80);
     color col4 = color(229+age/2, 225, 0, 80);
+    color pcol3 = color(235, 230, 232);
+    color pcol4 = color(229, 225, 0);
+
     if (col==0) fill(col1);
     else fill(col2);
 
@@ -73,8 +76,8 @@ class Particle {
     pop();
 
     if (age==0) {
-      if (random(100) < 50) fill(200, 0, 0, 200);
-      else fill(0, 200, 255, 200);
+      if (random(100) < 50) fill(pcol3);
+      else fill(pcol4);
       float size = 2+random(4);
       if (random(100) < 5) size += 5;
       ellipse(v.x, v.y, size, size);
