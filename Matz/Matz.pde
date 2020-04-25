@@ -26,7 +26,7 @@ void setup(){
 
 
 void draw(){
-  saveFrame("Frames/######.png");
+  //saveFrame("Frames/######.png");
   
   if(frameCount % 80== 0){
     println(frameCount);
